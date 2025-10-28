@@ -1,26 +1,31 @@
-<section id="skills" class="py-20 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">💻 Skills</h2>
+<section id="skills" class="py-20 bg-gradient-to-r from-purple-50 via-pink-50 to-yellow-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">
+      💻 Skills
+    </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div
         *ngFor="let skill of skills"
-        class="bg-white shadow rounded-xl p-6 hover:shadow-lg transition"
+        class="bg-white rounded-2xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 p-6"
       >
-        <h3 class="text-xl font-semibold mb-4" [ngClass]="skill.color">
-          {{ skill.icon }} {{ skill.title }}
+        <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+          <span [ngClass]="skill.color">{{ skill.icon }}</span>
+          <span>{{ skill.title }}</span>
         </h3>
 
         <!-- List Type -->
         <ul *ngIf="skill.type === 'list'" class="space-y-2 text-gray-700">
-          <li *ngFor="let item of skill.items">{{ item }}</li>
+          <li *ngFor="let item of skill.items" class="flex items-center gap-2">
+            <span class="text-green-500 font-bold">•</span> {{ item }}
+          </li>
         </ul>
 
         <!-- Badge Type -->
         <div *ngIf="skill.type === 'badge'" class="flex flex-wrap gap-2">
           <span
             *ngFor="let item of skill.items"
-            [ngClass]="skill.badgeColor + ' px-3 py-1 rounded-full text-sm font-medium'"
+            [ngClass]="skill.badgeColor + ' px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 hover:from-blue-200 hover:to-blue-300 transition'"
           >
             {{ item }}
           </span>

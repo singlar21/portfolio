@@ -1,16 +1,40 @@
-<header class="fixed top-0 left-0 w-full bg-white shadow z-50">
-  <nav class="mx-auto flex items-center py-4 px-6">
+<header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-50 transition-all duration-300">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+    
     <!-- Logo -->
-    <a href="#" class="text-2xl font-bold text-blue-600"></a>
+    <a href="#" class="text-2xl font-extrabold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">
+      Rohit
+    </a>
 
-    <!-- Menu -->
-    <ul class="flex space-x-6">
-      <li><a href="#about" class="hover:text-blue-600">Home</a></li>
-      <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-      <li><a href="#personalprojects" class="hover:text-blue-600">Personal Projects</a></li>
-      <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
-      <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-      <li><a href="assets/Rohit Singla| Full Stack Developer.pdf" download class="hover:text-blue-600">Resume</a></li>
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+      <li><a href="#about" class="hover:text-blue-600 transition-colors duration-300">Home</a></li>
+      <li><a href="#projects" class="hover:text-blue-600 transition-colors duration-300">Projects</a></li>
+      <li><a href="#personalprojects" class="hover:text-blue-600 transition-colors duration-300">Personal Projects</a></li>
+      <li><a href="#skills" class="hover:text-blue-600 transition-colors duration-300">Skills</a></li>
+      <li><a href="#contact" class="hover:text-blue-600 transition-colors duration-300">Contact</a></li>
+      <li><a href="assets/Rohit Singla| Full Stack Developer.pdf" download class="hover:text-blue-600 transition-colors duration-300">Resume</a></li>
     </ul>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button (click)="toggleMobileMenu()" class="text-gray-700 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" 
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
   </nav>
+
+  <!-- Mobile Menu -->
+  <ul *ngIf="mobileMenuOpen" class="flex flex-col space-y-4 px-6 pb-4 md:hidden text-gray-700 font-medium">
+    <li><a href="#about" class="hover:text-blue-600 transition-colors duration-300">Home</a></li>
+    <li><a href="#projects" class="hover:text-blue-600 transition-colors duration-300">Projects</a></li>
+    <li><a href="#personalprojects" class="hover:text-blue-600 transition-colors duration-300">Personal Projects</a></li>
+    <li><a href="#skills" class="hover:text-blue-600 transition-colors duration-300">Skills</a></li>
+    <li><a href="#contact" class="hover:text-blue-600 transition-colors duration-300">Contact</a></li>
+    <li><a href="assets/Rohit Singla| Full Stack Developer.pdf" download class="hover:text-blue-600 transition-colors duration-300">Resume</a></li>
+  </ul>
 </header>
