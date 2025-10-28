@@ -10,19 +10,19 @@
         class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 flex flex-col justify-between h-full">
         <!-- Top Section -->
         <div>
-          <h3 class="text-2xl font-semibold text-blue-600 mb-2">
-            {{ project.Name }}
+          <h3 class="text-1xl font-semibold text-emerald-600 mb-2">
+            {{ project.name }}
           </h3>
           <h4 class="text-lg text-gray-500 font-medium mb-4">
-            {{ project.Company }}
+            {{ project.company }}
           </h4>
 
           <p class="text-gray-600 mb-6 leading-relaxed">
-            {{ project.Description }}
+            {{ project.description }}
           </p>
 
-          <p class="text-gray-600 mb-6 leading-relaxed" *ngIf="project?.Link">
-            <a href="{{project.Link}}" target="_blank" class="text-blue-600">More Details</a>
+          <p class="text-gray-600 mb-6 leading-relaxed" *ngIf="project?.link">
+            <a href="{{project.link}}" target="_blank" class="text-blue-600">More Details</a>
           </p>
         </div>
 
@@ -30,10 +30,10 @@
         <!-- Bottom Section -->
         <div class="mt-auto pt-4 border-t border-gray-200">
           <!-- Skills -->
-          <div *ngIf="project.Skills" class="mb-4">
+          <div *ngIf="project.skills" class="mb-4">
             <h5 class="font-semibold text-gray-700 mb-2">Skills:</h5>
             <div class="flex flex-wrap gap-2">
-              <span *ngFor="let skill of project.Skills.split(',')"
+              <span *ngFor="let skill of project.skills"
                 class="inline-block bg-blue-100 text-blue-700 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-200 transition">
                 {{ skill.trim() }}
               </span>
@@ -42,12 +42,12 @@
 
           <!-- Roles -->
           <!-- Roles -->
-          <div *ngIf="project.Roles">
+          <div *ngIf="project.roles">
             <h5 class="font-semibold text-gray-700 mb-2">
               Roles & Responsibilities:
             </h5>
             <ul class="list-disc list-inside space-y-1 text-gray-600 text-sm">
-              <li *ngFor="let role of project.Roles">
+              <li *ngFor="let role of project.roles">
                 {{ role }}
               </li>
             </ul>
