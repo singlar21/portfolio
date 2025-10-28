@@ -1,0 +1,6 @@
+#projects {
+  scroll-margin-top: 100px;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+}
