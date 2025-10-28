@@ -9,18 +9,18 @@ import { Component } from '@angular/core';
   styleUrl: './personal-projects.component.css'
 })
 export class PersonalProjectsComponent {
-  projectList:any[] = projects;
+  projectList: any[] = projects;
 
 }
 
 
- export const projects = [
+export const projects = [
   {
     name: "www.rohikastore.com",
     company: "Rohika",
     description: `Rohika Store is a high-end online platform dedicated to showcasing and selling authentic Indian jewellery. Designed with elegance and usability in mind, 
     the website highlights a wide range of collections including Polki Kundan, Moissanite, Bridal Sets, Earrings, Bangles, Maangtikkas, and exclusive combo sets.`,
-    skills: [ "Shopify Liquid Templates","Custom Theme Development","Razorpay Integration","PhonePe Integration","Twilio Notifications","Product Catalog & Collection Management","Discounts & Loyalty Programs"],
+    skills: ["Shopify Liquid Templates", "Custom Theme Development", "Razorpay Integration", "PhonePe Integration", "Twilio Notifications", "Product Catalog & Collection Management", "Discounts & Loyalty Programs"],
     link: "https://rohikastore.com",
     roles: [
       "Shopify Development: Custom theme integration and setup, working with Shopify Liquid templates.",
@@ -40,14 +40,29 @@ export class PersonalProjectsComponent {
                   <li>Generate detailed reports on sales, revenue, and outstanding payments.</li>
                   <li>Securely manage user accounts with role-based access.</li>`,
     link: "https://rohika-billing-app.web.app",
-    skills: ["Angular 15", "Spring Boot", "REST APIs", "Firebase", "PostgreSQL", "Heroku"],
+    skills: ["Angular 15", "Spring Boot", "REST APIs", "Firebase", "PostgreSQL", "Heroku", "ChatGPT"],
     roles: [
       "Designed and developed the billing application from scratch using Angular and Firebase.",
       "Integrated Shopify webhooks to automate order tracking and invoice generation.",
       "Implemented real-time billing and invoice management with Firebase Firestore.",
       "Developed responsive UI/UX for seamless desktop and mobile experience.",
     ]
+  },
+  {
+    "name": "JSONBhai",
+    "company": "Personal Project",
+    "description": "A web-based tool for working with JSON data, designed to help developers and data analysts quickly format, compare, minify, and validate JSON. Key features include:\n<li>JSON formatting for better readability.</li>\n<li>Comparison of multiple JSON objects to detect differences.</li>\n<li>Minification to reduce file size.</li>\n<li>Validation to ensure JSON structure correctness.</li>",
+    "link": "https://jsonbhai.site/",
+    "skills": ["TypeScript", "Angular 15", "HTML5", "CSS3", "Bootstrap", "Firebase", "ChatGPT"],
+    "roles": [
+      "Designed and developed JSONBhai from scratch as a full-stack web application.",
+      "Implemented JSON formatting, comparison, minification, and validation features.",
+      "Created a responsive and intuitive UI for efficient developer workflows.",
+      "Optimized performance for handling large JSON files with minimal delay.",
+      "Ensured cross-browser compatibility and smooth user experience on desktop and mobile."
+    ]
   }
+
 ];
 
 
