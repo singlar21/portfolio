@@ -1,7 +1,20 @@
 <app-header></app-header>
 <app-hero></app-hero>
 <app-about></app-about>
+
+<app-timeline></app-timeline>
 <app-projects></app-projects>
 <app-personal-projects></app-personal-projects>
 <app-skills></app-skills>
 <app-contact></app-contact>
+<!-- Back to Top Button -->
+<button
+  *ngIf="showScrollTop"
+  (click)="scrollToTop()"
+  class="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-purple-600 to-pink-500 text-white p-3 rounded-full shadow-lg hover:scale-110 transform transition duration-300"
+  title="Back to top"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>

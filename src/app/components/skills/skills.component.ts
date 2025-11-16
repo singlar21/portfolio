@@ -66,7 +66,7 @@ export const SKILLS: SkillCategory[] = [
     icon: '⚙️',
     type: 'list',
     color: 'text-indigo-700',
-    items: ['Jenkins, Git, GitLab, SVN/CVS', 'Jira, AWS (basics)', 'Docker, Kubernetes']
+    items: ['Jenkins, Git, GitLab, SVN/CVS', 'Jira, AWS (S3, cloudfront, Route 53)', 'Docker, Kubernetes']
   },
   {
     title: 'Messaging & Event Streaming',

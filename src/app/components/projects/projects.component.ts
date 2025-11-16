@@ -20,7 +20,7 @@ export class ProjectsComponent {
     company: "Ericsson India Pvt. Ltd. (Jan 2023 - Sep 2025)",
     description: `CMC is a software solution for administering and configuring multiple network nodes. 
     Collaborated closely with the Germany client team to manage communications, requirements, and delivery schedules.`,
-    skills: ["Angular JS", "Angular 14", "Spring Boot", "RabbitMQ", "REST APIs", "Microservices", "Agile", "Team Coordination", "Docker", "Kubernetes", "JUnit", "Mockito"],
+    skills: ["Angular JS", "Angular 17", "Spring Boot", "RabbitMQ", "REST APIs", "Microservices", "Agile", "Team Coordination", "Docker", "Kubernetes", "JUnit", "Mockito"],
     roles: [
       "Primary point of contact between India and Germany teams.",
       "Coordinated requirements, feedback, and delivery schedules; facilitated daily/weekly calls and issue resolution.",
@@ -91,5 +91,3 @@ export class ProjectsComponent {
     ]
   }
 ];
-
-
