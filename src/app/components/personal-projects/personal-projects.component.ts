@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { GRADIENT_MAP } from '../../theme/theme.constant';
+import { ThemeService, ThemeColor } from '../../theme/theme.service';
 
 @Component({
   selector: 'app-personal-projects',
@@ -10,6 +12,14 @@ import { Component } from '@angular/core';
 })
 export class PersonalProjectsComponent {
   projectList: any[] = projects;
+
+  gradientClass =  signal(GRADIENT_MAP.pink);
+  
+    constructor(private themeService:ThemeService) {
+      this.themeService.currentTheme$.subscribe((theme: ThemeColor) => {
+        this.gradientClass.set(GRADIENT_MAP[theme]);
+      });
+    }
 
 }
 

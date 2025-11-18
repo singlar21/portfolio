@@ -16,6 +16,22 @@
       <li><a href="assets/Rohit Singla| Full Stack Developer.pdf" download class="hover:text-blue-600 transition-colors duration-300">Resume</a></li>
     </ul>
 
+    <!-- Theme Button -->
+    <div class="ml-4 relative">
+      <button (click)="toggleThemeModal()" class="bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded-md text-sm font-medium">
+        Change Theme
+      </button>
+
+      <!-- Theme Popup -->
+      <div *ngIf="themeModalOpen" class="absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-lg z-50">
+        <div class="p-2">
+          <button (click)="changeTheme('pink')" class="w-full text-left px-2 py-1 hover:bg-pink-100 rounded">Pink</button>
+          <button (click)="changeTheme('red')" class="w-full text-left px-2 py-1 hover:bg-red-100 rounded">Red</button>
+          <button (click)="changeTheme('blue')" class="w-full text-left px-2 py-1 hover:bg-blue-100 rounded">Blue</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Mobile Menu Button -->
     <div class="md:hidden">
       <button (click)="toggleMobileMenu()" class="text-gray-700 focus:outline-none">

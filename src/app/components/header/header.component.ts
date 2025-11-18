@@ -1,5 +1,6 @@
 import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ThemeColor, ThemeService } from '../../theme/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,21 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   mobileMenuOpen:boolean = false;
 
+  themeService =  inject(ThemeService);
+
+  themeModalOpen = false;
+
+
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+   toggleThemeModal() {
+    this.themeModalOpen = !this.themeModalOpen;
+  }
+
+  changeTheme(theme: ThemeColor) {
+    this.themeService.setTheme(theme);
+    this.themeModalOpen = false; // close modal after selection
   }
 }
