@@ -3,18 +3,16 @@
     
     <!-- Profile Image -->
     <div class="mb-6 md:mb-0 flex-shrink-0">
-      <img src="../../../assets/pic.jpg" alt="Rohit Singla" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-indigo-500 shadow-lg mx-auto">
+      <img src="../../../assets/pic.jpg" alt="{{aboutData.firstName +' '+aboutData.lastName}}" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-indigo-500 shadow-lg mx-auto">
     </div>
 
     <!-- Text Content -->
     <div class="text-center md:text-left">
       <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">
-        Hi, I’m Rohit 👋
+        Hi, I’m {{aboutData.firstName}} 👋
       </h2>
-      <p class="text-lg text-gray-700 max-w-2xl leading-relaxed">
-        Full Stack Developer with <span class="font-semibold text-indigo-600">11+ years of experience</span> in
-        <span class="font-semibold text-indigo-600">Java, Spring Boot, Angular, SQL, and Kubernetes</span>.
-        Currently in Canada, open to new opportunities.
+      <p class="text-lg text-gray-700 max-w-2xl leading-relaxed" [innerHTML]="aboutData.about">
+        
       </p>
     </div>
 

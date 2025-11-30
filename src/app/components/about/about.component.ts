@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { ThemeColor, ThemeService } from '../../theme/theme.service';
 import { GRADIENT_MAP } from '../../theme/theme.constant';
 import { NgClass } from '@angular/common';
+import { header, Header } from '../../json/data.json';
 
 @Component({
   selector: 'app-about',
@@ -11,6 +12,8 @@ import { NgClass } from '@angular/common';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+
+  aboutData:Header = header;
 
   gradientClass =  signal(GRADIENT_MAP.pink);
 

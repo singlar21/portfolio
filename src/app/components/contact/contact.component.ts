@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { GRADIENT_MAP } from '../../theme/theme.constant';
 import { ThemeService, ThemeColor } from '../../theme/theme.service';
 import { NgClass } from '@angular/common';
+import { contact, Contact } from '../../json/data.json';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,8 @@ import { NgClass } from '@angular/common';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
+
+  contactData:Contact = contact;
 
   gradientClass =  signal(GRADIENT_MAP.pink);
   

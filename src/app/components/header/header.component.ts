@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ThemeColor, ThemeService } from '../../theme/theme.service';
+import { Header, header } from '../../json/data.json';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,8 @@ import { ThemeColor, ThemeService } from '../../theme/theme.service';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  headerData:Header = header; // expose constant to template
+
   mobileMenuOpen:boolean = false;
 
   themeService =  inject(ThemeService);
