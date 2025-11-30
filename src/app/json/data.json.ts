@@ -30,6 +30,7 @@ export interface ProjectData {
     link?:string;
 }
 
+//. Change Data in below files to make changes//
 
 export const header: Header = {firstName:'Rohit',lastName:'Singla',
     about:`Full Stack Developer with 
@@ -38,7 +39,8 @@ export const header: Header = {firstName:'Rohit',lastName:'Singla',
     <span class="font-semibold text-indigo-600">Java, Spring Boot, Angular, SQL, and Kubernetes</span>.
     Currently in Canada, open to new opportunities.`};
 
-export const contact:Contact = {description:'I’m open to job opportunities and collaborations. Reach out via email or connect with me on LinkedIn and GitHub.',
+export const contact:Contact = {description:`I’m open to job opportunities and collaborations. 
+    Reach out via email or connect with me on LinkedIn and GitHub.`,
     email:'rohit.singla6@gmail.com',
     linkedInUrl:'https://www.linkedin.com/in/rohit-singla-5273369a',
     githubUrl:'https://github.com/singlar21'
