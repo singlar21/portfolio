@@ -62,4 +62,4 @@ Edit the constants based on the interfaces below, build the Angular app, and dep
 
     ng build --configuration production
 
-5. Deploy the /dist/rohit-portfolio/browser folder.
+5. Deploy the /dist/portfolio/browser folder.
