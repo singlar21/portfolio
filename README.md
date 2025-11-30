@@ -1,27 +1,65 @@
-# RohitPortfolio
+📄 Portfolio Config Guide
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
+This project uses a few TypeScript interfaces that help you easily update your personal information, skills, and projects.
+Edit the constants based on the interfaces below, build the Angular app, and deploy your portfolio anywhere (Netlify, Vercel, GitHub Pages, etc.).
 
-## Development server
+    ** 🧍 Header
+    export interface Header {
+        firstName: string;
+        lastName: string;
+        about: string;
+    }
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+    Use this to update your name and short intro.
 
-## Code scaffolding
+    ** 📬 Contact
+    export interface Contact {
+        description: string;
+        email: string;
+        linkedInUrl: string;
+        githubUrl: string;
+    }
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    Update your basic contact details and social links.
 
-## Build
+    ** 🛠️ Skills
+    export interface SkillCategory {
+        title: string;
+        icon?: string;
+        type: 'list' | 'badge';
+        color: string;
+        items: string[];
+        badgeColor?: string;
+    }
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    Use this to group skills using lists or badges.
 
-## Running unit tests
+    ** 🚀 Projects
+    export interface ProjectData {
+        name: string;
+        company: string;
+        description: string;
+        skills: string[];
+        roles: string[];
+        link?: string;
+    }
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    Add your project details, responsibilities, and tech stack.
 
-## Running end-to-end tests
+    ** Change Images in assets forlder according to your requirement.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+*******************************************************************
 
-## Further help
+🔧 How to Use
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Open the constants file data>profile.constant.ts
+
+2. Replace my data with your own values using the interfaces above.
+
+3. Run the project:  ng serve
+
+4. Build for deployment:
+
+    ng build --configuration production
+
+5. Deploy the /dist/rohit-portfolio/browser folder.

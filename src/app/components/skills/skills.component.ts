@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { GRADIENT_MAP } from '../../theme/theme.constant';
 import { ThemeService, ThemeColor } from '../../theme/theme.service';
-import { SkillCategory, SKILLS } from '../../json/data.json';
+import { SkillCategory } from '../../data/interfaces';
+import { SKILLS } from '../../data/profile.constant';
 
 @Component({
   selector: 'app-skills',

@@ -2,7 +2,8 @@ import { Component, signal } from '@angular/core';
 import { GRADIENT_MAP } from '../../theme/theme.constant';
 import { ThemeService, ThemeColor } from '../../theme/theme.service';
 import { NgClass } from '@angular/common';
-import { contact, Contact } from '../../json/data.json';
+import { Contact } from '../../data/interfaces';
+import { contact } from '../../data/profile.constant';
 
 @Component({
   selector: 'app-contact',

@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { GRADIENT_MAP } from '../../theme/theme.constant';
 import { ThemeService, ThemeColor } from '../../theme/theme.service';
-import { personalProjects, ProjectData } from '../../json/data.json';
+import { ProjectData } from '../../data/interfaces';
+import { personalProjects } from '../../data/profile.constant';
 
 @Component({
   selector: 'app-personal-projects',

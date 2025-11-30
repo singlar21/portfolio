@@ -1,34 +1,4 @@
-export interface Header {
-  firstName: string;
-  lastName: string;
-  about: string;
-}
-
-export interface Contact {
-  description: string;
-  email: string;
-  linkedInUrl: string;
-  githubUrl: string;
-}
-
-
-export interface SkillCategory {
-  title: string;
-  icon?: string;          // Optional emoji/icon
-  type: 'list' | 'badge'; // Whether to render as <ul> or badge <span>
-  color: string;          // Tailwind text color for heading
-  items: string[];        // Skill items
-  badgeColor?: string;    // If type=badge, bg/text color for badges
-}
-
-export interface ProjectData {
-    name:string;
-    company:string;
-    description:string;
-    skills:string[];
-    roles:string[];
-    link?:string;
-}
+import { Contact, Header, ProjectData, SkillCategory } from "./interfaces";
 
 //. Change Data in below files to make changes//
 
@@ -39,12 +9,16 @@ export const header: Header = {firstName:'Rohit',lastName:'Singla',
     <span class="font-semibold text-indigo-600">Java, Spring Boot, Angular, SQL, and Kubernetes</span>.
     Currently in Canada, open to new opportunities.`};
 
+
+
 export const contact:Contact = {description:`I’m open to job opportunities and collaborations. 
     Reach out via email or connect with me on LinkedIn and GitHub.`,
     email:'rohit.singla6@gmail.com',
     linkedInUrl:'https://www.linkedin.com/in/rohit-singla-5273369a',
     githubUrl:'https://github.com/singlar21'
 }
+
+
 
  export const companyProjects:ProjectData[] = [
   {
@@ -123,6 +97,8 @@ export const contact:Contact = {description:`I’m open to job opportunities and
     ]
   }
 ];
+
+
 
 export const personalProjects:ProjectData[] = [
   {

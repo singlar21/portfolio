@@ -2,7 +2,8 @@ import { Component, signal } from '@angular/core';
 import { ThemeColor, ThemeService } from '../../theme/theme.service';
 import { GRADIENT_MAP } from '../../theme/theme.constant';
 import { NgClass } from '@angular/common';
-import { header, Header } from '../../json/data.json';
+import { Header } from '../../data/interfaces';
+import { header } from '../../data/profile.constant';
 
 @Component({
   selector: 'app-about',
