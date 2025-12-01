@@ -29,3 +29,12 @@ export interface ProjectData {
     roles:string[];
     link?:string;
 }
+
+export interface ExperienceData {
+    role:string;
+    company:string;
+    period:string;
+    description:string;
+    logoUrl:string;
+    skills:string[];
+}
