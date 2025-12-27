@@ -33,6 +33,7 @@ export interface ProjectData {
 export interface ExperienceData {
     role:string;
     company:string;
+    client:string;
     period:string;
     description:string;
     logoUrl:string;

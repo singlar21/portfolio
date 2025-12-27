@@ -1,5 +1,5 @@
 <section id="experience" class="py-20" [ngClass]="gradientClass()">
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-4xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">
       💼 Experience Timeline
     </h2>
@@ -20,7 +20,10 @@
             />
 
             <!-- Company Name & Role -->
-            <h3 class="text-xl font-semibold text-emerald-600">{{ exp.company }}</h3>
+            <h3 class="text-l font-semibold text-emerald-600">{{ exp.company }}</h3>
+            @if(exp?.client) {
+              <h4 class="text-amber-600 text-sm">{{ exp.client }}</h4>
+            }
             <h4 class="text-indigo-700 font-medium">{{ exp.role }}</h4>
             <p class="text-sm text-gray-500 mb-2">{{ exp.period }}</p>
 

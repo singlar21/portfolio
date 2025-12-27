@@ -153,6 +153,15 @@ export const personalProjects:ProjectData[] = [
 
 export const experience = [
     {
+      role: 'Java Full Stack Lead',
+      company: 'Rohit Singla IT Consulting Inc.',
+      client: 'K-Tek (Staffing) → HCLTech (Client)',
+      period: 'Dec 2025 – Present',
+      description: 'Heading a team of 4+ for the migration of an application from JSF/Java to Spring Boot with Angular.',
+      logoUrl: 'assets/rohitsingla.png',
+      skills: ['Angular 18', 'JSF','Spring Boot', 'Microservices', 'Agile', 'Kubernetes', 'Docker', 'Git', 'MySQL']
+    },
+    {
       role: 'Senior Software Engineer 3',
       company: 'Ericsson India Pvt. Ltd.',
       period: 'Apr 2021 – Sep 2025',
@@ -163,7 +172,7 @@ export const experience = [
     },
     {
       role: 'Senior Software Engineer',
-      company: 'PeopleStrong HR Services',
+      company: 'Peoplestrong Techonlogies Private',
       period: 'Jul 2017 – Mar 2021',
       description: 'Developed HRMS modules and integrated ClearTax APIs for payroll analytics.',
       logoUrl: 'assets/peoplestrong.png',
